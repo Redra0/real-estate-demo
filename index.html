@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Strickland — independent redesign concept</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="notice"><div class="wrap"><strong>Independent redesign concept.</strong> An independent design study exploring a more modern property-search experience. Not an official Strickland website or an endorsed project.</div></div>
+
+<header class="nav"><div class="wrap">
+ <a class="logo" href="#top">Strickland</a>
+ <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="links">Menu</button>
+ <nav class="links" id="links" aria-label="Main">
+  <a href="#properties" data-mode="buy">Buy</a><a href="#properties" data-mode="rent">Rent</a><a href="#sell">Sell</a><a href="#about">About</a><a href="#contact">Contact</a>
+  <button class="btn" data-form="Book a valuation">Book a valuation</button>
+ </nav>
+</div></header>
+
+<main id="top">
+<section class="hero on-brand"><div class="wrap">
+ <div>
+  <span class="eyebrow">Find your place</span>
+  <h1>A place to call your own.</h1>
+  <p>Discover thoughtfully presented properties and find a home that feels right for you. Explore the possibilities with a property search designed around what matters most.</p>
+  <div class="actions"><a class="btn white" href="#search">Explore properties</a><a class="btn ghost" href="#sell">Sell or let with us</a></div>
+  <p class="sub">Your next chapter starts here.</p>
+ </div>
+ <div class="art" id="heroArt"></div>
+</div></section>
+
+<section id="search"><div class="wrap">
+ <h2>Find your next home</h2>
+ <p class="lead">Start with what matters to you. We’ll help you narrow down the possibilities.</p>
+ <form class="search" id="sf" novalidate>
+  <div class="tabs" role="group" aria-label="Search type">
+   <button type="button" aria-pressed="true" data-mode="buy">Buy</button>
+   <button type="button" aria-pressed="false" data-mode="rent">Rent</button>
+  </div>
+  <div class="fields">
+   <div class="loc"><label for="loc">Location</label><input id="loc" placeholder="Enter a town, postcode or area" autocomplete="off"></div>
+   <div><label for="kind">Property type</label><select id="kind"><option value="">Any property type</option><option>Apartment</option><option>Terraced house</option><option>Semi-detached house</option><option>Detached house</option></select></div>
+  <div><label for="min" id="minLabel">Minimum price (£)</label><input id="min" type="number" min="0" step="1000" inputmode="numeric" placeholder="No min"></div>
+  <div><label for="max" id="maxLabel">Maximum price (£)</label><input id="max" type="number" min="0" step="1000" inputmode="numeric" placeholder="No max"></div>
+   <div><label for="beds">Bedrooms</label><select id="beds"><option value="0">Any</option><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option></select></div>
+  </div>
+  <p class="err" id="serr" role="alert"></p>
+  <div class="row"><button class="btn" type="submit">Show properties</button><button class="btn ghost" type="reset" id="clear">Clear filters</button></div>
+ </form>
+</div></section>
+
+<section id="properties"><div class="wrap">
+ <span class="eyebrow">A few places to inspire you</span>
+ <h2>Homes worth discovering</h2>
+ <p class="lead">From characterful period homes to considered contemporary spaces, explore a selection of properties in this independent concept.</p>
+ <p class="msg" role="note"><strong>Fictional demo data:</strong> Every listing name, address, price, availability, description and status is invented. Photos are illustrative and are not images of the named properties.</p>
+ <p class="count" id="count" aria-live="polite"></p>
+ <div class="grid" id="grid"></div>
+ <div class="row"><button class="btn" id="all">Explore all properties</button><span class="meta" id="savedN"></span></div>
+</div></section>
+
+<section id="about" class="white"><div class="wrap">
+ <span class="eyebrow">A more considered approach</span>
+ <h2>Property, made simpler.</h2>
+ <p class="lead">Finding your next home should feel exciting, not overwhelming. Every detail of this concept is designed to make the next step clearer.</p>
+ <div class="three">
+  <div class="benefit"><svg viewBox="0 0 32 32"><circle cx="14" cy="14" r="8"/><path d="m20 20 8 8"/></svg><h3>Find what fits</h3><p>Browse properties through clear information and straightforward search options.</p></div>
+  <div class="benefit"><svg viewBox="0 0 32 32"><rect x="4" y="5" width="24" height="22" rx="2"/><path d="M9 12h14M9 17h14M9 22h8"/></svg><h3>See the details</h3><p>Compare the spaces, features and practical details that matter to your decision.</p></div>
+  <div class="benefit"><svg viewBox="0 0 32 32"><path d="M5 16h20M18 8l8 8-8 8"/></svg><h3>Take the next step</h3><p>Move from browsing to an enquiry through a clear, uncomplicated customer journey.</p></div>
+ </div>
+</div></section>
+
+<section id="sell" class="on-brand"><div class="wrap center">
+ <span class="eyebrow">Thinking of moving on?</span>
+ <h2>Your property deserves the right introduction.</h2>
+ <p class="lead">Whether you’re considering selling or letting, start by understanding your options and what your property could offer its next owner or tenant.</p>
+ <div class="actions"><button class="btn white" data-form="Request a valuation">Request a valuation</button><a class="btn ghost" href="#contact">Talk to the team</a></div>
+</div></section>
+
+<section class="white"><div class="wrap split">
+ <div class="art" id="areaArt"></div>
+ <div>
+  <span class="eyebrow">Rooted in the local area</span>
+  <h2>A home is more than an address.</h2>
+  <p class="lead">The right location shapes everyday life. Explore the character of local neighbourhoods, from independent shops and green spaces to transport links and the places that make an area feel like home.</p>
+  <p class="meta">Use only locations and local information that have been verified and are relevant to the agency.</p>
+  <button class="btn" data-form="Explore local areas">Explore local areas</button>
+ </div>
+</div></section>
+
+<section><div class="wrap center">
+ <h2>Ready to make your next move?</h2>
+ <p class="lead">Whether you’re searching for a home or considering your property’s next chapter, take the first step today.</p>
+ <div class="actions"><a class="btn" href="#search">Explore properties</a><button class="btn ghost" data-form="Get in touch">Get in touch</button></div>
+</div></section>
+</main>
+
+<footer id="contact"><div class="wrap">
+ <div class="fgrid">
+  <div><h3>Strickland</h3><p>A considered approach to finding your next place.</p></div>
+  <div><ul><li><a href="#properties" data-mode="buy">Buy a property</a></li><li><a href="#properties" data-mode="rent">Rent a property</a></li><li><a href="#sell">Sell or let</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul></div>
+  <div><h3>Let’s start a conversation.</h3><p>Replace with verified business contact details before commercial use.</p><button class="btn brass" data-form="Get in touch">Send a message</button></div>
+ </div>
+ <div class="legal"><span>Independent, unofficial website redesign concept. Not affiliated with or endorsed by Strickland. All listings and listing details are fictional demo data.</span><span><a href="#top">Privacy policy</a> · <a href="#top">Cookie policy</a> · <a href="#top">Accessibility</a></span><span>Replace with appropriate project attribution before publication.</span></div>
+</div></footer>
+
+<dialog id="pd" aria-labelledby="pdt"><div class="dbody" id="pdb"></div></dialog>
+<dialog id="fd" aria-labelledby="fdt"><div class="dbody">
+ <div class="dtop"><h2 id="fdt" style="font-size:1.8rem">Get in touch</h2><button class="x" data-close aria-label="Close">✕</button></div>
+ <p class="meta" id="fctx">All fields marked * are required.</p>
+ <form id="ef" novalidate>
+  <label for="n">Name *</label><input id="n" autocomplete="name" required aria-describedby="en"><p class="err" id="en" aria-live="polite"></p>
+  <label for="e">Email *</label><input id="e" type="email" autocomplete="email" required aria-describedby="ee"><p class="err" id="ee" aria-live="polite"></p>
+  <label for="m">Message</label><textarea id="m"></textarea>
+    <div class="row"><button class="btn" type="submit">Submit demo enquiry</button><button class="btn ghost" type="button" data-close>Cancel</button></div>
+ </form>
+ <div class="msg" id="done" hidden><strong>Demo only — your enquiry was not sent.</strong> This prototype does not transmit your details. A live version must be connected to the agency’s inbox or CRM before enquiries can be received.</div>
+</div></dialog>
+
+<script src="property-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
